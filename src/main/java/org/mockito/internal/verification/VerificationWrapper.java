@@ -49,4 +49,7 @@ public abstract class VerificationWrapper<WrapperType extends VerificationMode> 
         return copySelfWithNewVerificationMode(VerificationModeFactory.only());
     }
 
+    public VerificationMode last() {
+        return copySelfWithNewVerificationMode(VerificationModeFactory.last());
+    }
 }

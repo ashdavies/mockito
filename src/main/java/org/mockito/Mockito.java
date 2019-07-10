@@ -2820,6 +2820,21 @@ public class Mockito extends ArgumentMatchers {
     }
 
     /**
+     * Allows checking if given method was the last one invoked. E.g:
+     * <pre class="code"><code class="java">
+     *   verify(mock, last()).someMethod();
+     * </code></pre>
+     *
+     * See examples in javadoc for {@link Mockito} class
+     *
+     * @return verification mode
+     */
+    @CheckReturnValue
+    public static VerificationMode last() {
+        return VerificationModeFactory.last();
+    }
+
+    /**
      * Verification will be triggered after given amount of millis, allowing testing of async code.
      * Useful when interactions with the mock object did not happened yet.
      * Extensive use of after() method can be a code smell - there are better ways of testing concurrent code.

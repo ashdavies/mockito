@@ -21,6 +21,10 @@ public class VerificationModeFactory {
         return new Only(); //TODO make exception message nicer
     }
 
+    public static VerificationMode last() {
+        return new Last();
+    }
+
     public static Times times(int wantedNumberOfInvocations) {
         return new Times(wantedNumberOfInvocations);
     }
